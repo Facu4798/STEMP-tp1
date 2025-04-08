@@ -30,11 +30,11 @@ def obtener_datos_yahoo(inicio, fin,
             raise ValueError("No data found for the given date.")
         
         #ingestar a base de datos mysql
-        from ETL.carga_yahoo import cargar_datos
-        try:
-            cargar_datos(data,ticker=ticker,user=user,password=password,port=port,host=host)
-        except:
-            print("Error al cargar los datos a la base de datos MySQL")
+        # from ETL.carga_yahoo import cargar_datos
+        # try:
+        #     cargar_datos(data,ticker=ticker,user=user,password=password,port=port,host=host)
+        # except:
+        #     print("Error al cargar los datos a la base de datos MySQL")
 
         return data
     except Exception as e:
