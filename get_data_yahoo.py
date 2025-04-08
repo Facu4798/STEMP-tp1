@@ -31,7 +31,8 @@ def obtener_datos_yahoo(inicio, fin,
 
         # Eliminar la segunda fila de columnas
         data.columns = data.columns.droplevel(1)
-        
+        datos.columns = [i for i in datos.columns]
+        datos.index = [i for i in datos.index]
         #ingestar a base de datos mysql
         # from ETL.carga_yahoo import cargar_datos
         # try:
